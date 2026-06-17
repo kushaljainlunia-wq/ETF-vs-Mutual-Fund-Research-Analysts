@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ETF vs Mutual Fund Research | Kushal Lunia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:2rem;
+    color:#0f172a;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.feature h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.portfolio-card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+}
+
+.portfolio-card:hover{
+    transform:translateY(-5px);
+}
+
+.portfolio-card h3{
+    margin-bottom:10px;
+}
+
+.portfolio-card p{
+    color:#64748b;
+    margin-bottom:20px;
+}
+
+.badge{
+    display:inline-block;
+    background:#eff6ff;
+    color:#2563eb;
+    padding:5px 12px;
+    border-radius:6px;
+    font-size:0.85rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.btn{
+    text-decoration:none;
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+.author{
+    text-align:center;
+}
+
+.footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+.hero h1{ font-size:2rem; }
+.hero p{ font-size:1rem; }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+<div class="container">
+<h1>📊 ETF vs Mutual Fund Research Terminal</h1>
+<p>
+An institutional-grade, interactive HTML research report for analyzing any ETF or Mutual Fund scheme (India + Global). Provide an ETF symbol or MF name (e.g., "Nifty 50 ETF", "Vanguard S&P 500 (VOO)", "Parag Parikh Flexi Cap - Direct Growth") to get performance analysis, ETF vs MF comparison, ETF vs Index Fund clarifier, hidden costs, SIP compatibility, tracking error trend, liquidity heatmap, tax simulator, better alternatives, buy/sell recommendations, and a scheme score out of 10.
+</p>
+</div>
+</header>
+
+<section class="section">
+<div class="container">
+<div class="section-title"><h2>About This Project</h2></div>
+<div class="card">
+<p>Welcome to my ETF vs Mutual Fund Research terminal, a project developed to perform structured and comprehensive analysis of individual ETFs and Mutual Fund schemes through live web data verification.</p>
+<br>
+<p>The research report integrates scheme-wise performance analysis (XIRR, returns, benchmark/category comparison), ETF vs MF comparison (13 features), ETF vs Index Fund clarifier (India-specific), hidden costs table (brokerage, demat, STT, slippage), SIP compatibility check (ETF ❌ vs MF ✅), tracking error trend chart (1Y/3Y), liquidity heatmap for ETFs (volume, bid-ask, AUM), tax bracket simulator (equity + debt by income), cost comparison (TER vs peers), better alternatives in the same category, action recommendations (Buy/Don't Buy/Wait/Swap), tax optimization, manager/issuer track record, AMC/issuer strength, and a 3-tier scoring framework into an interactive analytical framework.</p>
+<br>
+<p>The objective of this project is to transform ETF/MF data into meaningful investment insights and establish a standardized approach for evaluating individual ETFs and Mutual Fund schemes before investing or swapping.</p>
+<br>
+<p>Through this initiative, I aim to demonstrate the application of financial analysis, ETF/MF expertise, data visualization, and analytical problem-solving in the field of ETF and Mutual Fund research and investment decision-making.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-title"><h2>From Data to Decisions</h2></div>
+<div class="card">
+<p style="font-size:1.05rem; margin-bottom:25px;">Mutual fund platforms, ETF screeners, and stock platforms (like Screener.in) excel at providing data. However, investment decisions require much more than numbers alone. Investors must understand fund quality, manager/issuer execution, cost efficiency (including hidden costs), peer comparison, tax impact, SIP compatibility, tracking error stability, liquidity, and future growth prospects before building conviction.</p>
+<p style="font-size:1.05rem; margin-bottom:35px;">This research terminal is designed as a research layer on top of mutual fund/ETF platforms. Rather than replacing portfolio screeners (like Screener.in), it helps investors transform information into structured investment insights for a specific ETF or Mutual Fund scheme.</p>
+
+<table style="width:100%; border-collapse:collapse; margin-bottom:40px;">
+<tr style="background:#f1f5f9;">
+<th style="padding:15px; border:1px solid #e2e8f0; text-align:left;">Platforms (Screener.in / AMFI / MF Platforms)</th>
+<th style="padding:15px; border:1px solid #e2e8f0; text-align:left;">ETF vs Mutual Fund Research</th>
+</tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">Provides ETF/MF/stock data</td><td style="padding:12px; border:1px solid #e2e8f0;">Provides interpretation and context</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">Focus on historical NAV/price</td><td style="padding:12px; border:1px solid #e2e8f0;">Focus on future opportunities and risks</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">Requires manual research</td><td style="padding:12px; border:1px solid #e2e8f0;">Provides a structured research framework</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">Ratio and data-centric</td><td style="padding:12px; border:1px solid #e2e8f0;">Fund/ETF and decision-centric</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">Answers "What happened?"</td><td style="padding:12px; border:1px solid #e2e8f0;">Answers "Why it happened?" and "Should I buy?"</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">❌ No tracking error trend</td><td style="padding:12px; border:1px solid #e2e8f0;">✅ Tracking error trend chart (1Y/3Y)</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">❌ No liquidity heatmap</td><td style="padding:12px; border:1px solid #e2e8f0;">✅ Liquidity heatmap for ETFs</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">❌ No hidden costs table</td><td style="padding:12px; border:1px solid #e2e8f0;">✅ Hidden costs (brokerage, demat, STT)</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">❌ No SIP compatibility check</td><td style="padding:12px; border:1px solid #e2e8f0;">✅ SIP check (ETF ❌ vs MF ✅)</td></tr>
+<tr><td style="padding:12px; border:1px solid #e2e8f0;">❌ No tax simulator by income</td><td style="padding:12px; border:1px solid #e2e8f0;">✅ Tax bracket simulator (by income slab)</td></tr>
+</table>
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:35px;">
+<div>
+<h3 style="color:#2563eb; margin-bottom:15px;">📊 What This Research Covers</h3>
+<ul style="padding-left:20px;">
+<li>Quick Decision Card (1-line verdict + 3 bullets + allocation %)</li>
+<li>Scheme/ETF Summary & Basic Details (type, country, issuer/AMC)</li>
+<li>Performance Analysis (XIRR, Returns TTM/1Y/3Y/5Y)</li>
+<li>Benchmark & Category Comparison</li>
+<li>Peer Percentile Ranking</li>
+<li>Risk Metrics (Volatility, Beta, Alpha, Sharpe)</li>
+<li><strong>ETF vs MF Comparison (13 features)</strong>: pricing, liquidity, cost, tax, demat, SIP, etc.</li>
+<li><strong>ETF vs Index Fund Clarifier (India)</strong>: demat, SIP, expense, fractional units</li>
+<li><strong>Hidden Costs Table</strong>: brokerage, demat, STT, slippage + annual cost on ₹10L</li>
+<li><strong>SIP Compatibility Check</strong>: ETF ❌ manual vs MF ✅ auto (₹500 min)</li>
+<li><strong>Tracking Error Trend Chart (ETF)</strong>: 1Y/3Y line, color zones (green <0.3%)</li>
+<li><strong>Liquidity Heatmap (ETF)</strong>: avg volume, bid-ask spread, AUM, score 1–10</li>
+<li><strong>Tax Bracket Simulator</strong>: equity + debt by income slab</li>
+<li>Cost Comparison (TER vs Category Avg vs Top Peer + annual/3-year cost)</li>
+<li>Manager Track Record (MF: tenure, stability, previous schemes)</li>
+<li>Issuer Track Record (ETF: AUM, tracking error, reputation)</li>
+<li>AMC/Issuer Strength (AUM, reputation, stability)</li>
+<li>Category Context (avg return/volatility/TER)</li>
+<li>Who Should Buy This (investor type, horizon, risk, use case, demat status)</li>
+<li>Rebalancing Ease Score (ETF: 4/10 vs MF: 8/10)</li>
+<li>Dividend vs Growth Tax Note (growth winner for 95% investors)</li>
+<li>Currency Risk Flag (Global ETFs/MFs: USD/INR impact)</li>
+<li>ESG/Thematic Flag (concentration risk — limit 5–10%)</li>
+<li>Risks to Watch (top 3 risks with severity)</li>
+<li>Better Alternatives (top 3 in same category/index)</li>
+<li>Alternative Comparison Table (side-by-side)</li>
+<li>Action Recommendations (Buy/Don't Buy/Wait/Swap if Held)</li>
+<li>Portfolio Fit Questions (self-check: demat? SIP? intraday? active/passive?)</li>
+<li>When to Revisit (review horizon + triggers + manager/strategy alert)</li>
+<li>Tax Efficiency & Exit Load Impact (STT/LTCW, exit load, demat charges)</li>
+<li>Direct vs Regular Cost Saving (MF: annual + 3-year)</li>
+<li>Source Verification (AMC/AMFI/Issuer/Exchange/Value Research)</li>
+<li>Scheme Score out of 10 (3-Tier Framework: 50/35/15 weights)</li>
+<li>Data Freshness & Confidence Score (🟢/🟡/🔴)</li>
+<li>Missing Data Flags (⚠️)</li>
+<li>Decision Confidence Assessment</li>
+<li><strong>Quick Decision Flowchart</strong>: Demat?→SIP?→Intraday?→Pick ETF/MF</li>
+<li><strong>Quick FAQ Box</strong>: ETF vs Index Fund, demat, tax, active/passive, growth/div</li>
+</ul>
+</div>
+<div>
+<h3 style="color:#2563eb; margin-bottom:15px;">🎯 Why Use This Research</h3>
+<ul style="padding-left:20px;">
+<li>Move beyond NAV and understand the fund/issuer behind the numbers</li>
+<li>Reduce hours of manual research and information gathering</li>
+<li>Quickly identify if an ETF/MF is good for buy or not</li>
+<li>Evaluate fund manager quality (MF) or issuer quality (ETF)</li>
+<li>Assess whether expense ratio is justified by performance</li>
+<li>Compare against top 3 better alternatives in same category/index</li>
+<li>Understand cost savings (Direct vs Regular switching for MF)</li>
+<li>Understand hidden costs (brokerage, demat for ETF)</li>
+<li>Check SIP compatibility (ETF ❌ vs MF ✅)</li>
+<li>Check tracking error stability (ETF only)</li>
+<li>Check liquidity for ETFs (volume, bid-ask spread)</li>
+<li>Develop a structured buy/sell decision framework</li>
+<li>View tax impact by your income slab before making investment decisions</li>
+<li>Improve investment decision-making with a consistent framework</li>
+<li>Consolidate multiple research dimensions into one report</li>
+</ul>
+</div>
+</div>
+
+<br><br>
+<h3 style="color:#2563eb; margin-bottom:15px;">🔍 Recommended Workflow</h3>
+<p style="margin-bottom:15px;">The most effective approach is to use this research terminal alongside mutual fund platforms, ETF screeners, and stock platforms (like Screener.in).</p>
+<ol style="padding-left:20px;">
+<li>Use mutual fund/ETF platforms or Screener.in to discover and shortlist potential scheme opportunities.</li>
+<li>Provide the ETF symbol or MF name to the research terminal (e.g., "Nifty 50 ETF" or "Parag Parikh Flexi Cap - Direct Growth").</li>
+<li>Understand fund/issuer quality, cost efficiency (including hidden costs), manager/issuer execution, peer comparison, SIP compatibility, tracking error, liquidity, and tax impact.</li>
+<li>Review ETF vs MF comparison and ETF vs Index Fund clarifier (if considering passive investing).</li>
+<li>Review top 3 better alternatives in the same category/index (if available).</li>
+<li>Review action recommendations (Buy/Don't Buy/Wait/Swap) and tax considerations.</li>
+<li>Use the consolidated insights and scheme score to support investment decisions.</li>
+</ol>
+
+<br>
+<div style="background:#eff6ff; border-left:5px solid #2563eb; padding:20px; border-radius:10px;">
+<strong>Key Philosophy</strong>
+<br><br>
+ETF/MF data tells the story of the past. Investment decisions depend on understanding the future. This research terminal attempts to bridge that gap by combining fund/issuer analysis, performance review, benchmark comparison, cost analysis (including hidden costs), risk evaluation, manager/issuer track record, AMC/issuer strength, peer comparison, tax reasoning, SIP compatibility, tracking error, liquidity, and buy/sell recommendations into a single research framework.
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-title"><h2>What This Research Covers</h2></div>
+<div class="features">
+<div class="feature"><h3>📈 Performance Analysis</h3><p>XIRR, returns, benchmarks, category & peer comparison.</p></div>
+<div class="feature"><h3>💰 Cost & Hidden Costs</h3><p>TER + brokerage, demat, STT, slippage + annual on ₹10L.</p></div>
+<div class="feature"><h3>🆚 ETF vs MF</h3><p>13-feature comparison table (pricing, liquidity, cost, tax, demat).</p></div>
+<div class="feature"><h3>🏆 Alternatives</h3><p>Top 3 better ETFs/MFs in same category + side-by-side table.</p></div>
+<div class="feature"><h3>📊 Interactive HTML</h3><p>Clickable tabs, sortable tables, filters, hover tooltips.</p></div>
+<div class="feature"><h3>💵 Tax Simulator</h3><p>Tax bracket simulator by income slab (equity + debt).</p></div>
+<div class="feature"><h3>🏅 Scheme Score</h3><p>3-tier scoring framework out of 10 with source verification.</p></div>
+<div class="feature"><h3>👤 Manager & Issuer</h3><p>Manager tenure (MF) + Issuer track record (ETF).</p></div>
+<div class="feature"><h3>⚠️ Tracking Error</h3><p>Trend chart (1Y/3Y) with color zones (ETF only).</p></div>
+<div class="feature"><h3>🌊 Liquidity Heatmap</h3><p>Volume, bid-ask, AUM, score 1–10 (ETF only).</p></div>
+<div class="feature"><h3>📱 SIP Compatibility</h3><p>ETF ❌ manual vs MF ✅ auto (₹500 min).</p></div>
+<div class="feature"><h3>⚡ Decision Flowchart</h3><p>Demat?→SIP?→Intraday?→Pick ETF/MF.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-title"><h2>Sample Placeholders (Copy & Use)</h2></div>
+<div class="portfolio-grid">
+<div class="portfolio-card">
+<span class="badge">ETF (India)</span>
+<h3>Nifty 50 ETF</h3>
+<p>Example: "Nifty 50 ETF" or "ICICI Prudential Nifty ETF" or "BHFAL NIFTY 50"</p>
+<a class="btn" href="#">Analyze Now</a>
+</div>
+<div class="portfolio-card">
+<span class="badge">ETF (Global)</span>
+<h3>Vanguard S&P 500 (VOO)</h3>
+<p>Example: "Vanguard S&P 500 ETF (VOO)" or "iShares Nasdaq 100 (QQQ)" or "BlackRock Gold ETF (GLD)"</p>
+<a class="btn" href="#">Analyze Now</a>
+</div>
+<div class="portfolio-card">
+<span class="badge">Mutual Fund (India)</span>
+<h3>Parag Parikh Flexi Cap</h3>
+<p>Example: "Parag Parikh Flexi Cap - Direct Growth" or "HDFC Mid-Cap Opportunities - Regular Dividend"</p>
+<a class="btn" href="#">Analyze Now</a>
+</div>
+<div class="portfolio-card">
+<span class="badge">Mutual Fund (Global)</span>
+<h3>Vanguard S&P 500 Index Fund</h3>
+<p>Example: "Vanguard S&P 500 Index Fund" or "Fidelity Contrafund"</p>
+<a class="btn" href="#">Analyze Now</a>
+</div>
+<div class="portfolio-card">
+<span class="badge">Overlap Analysis</span>
+<h3>Add Your Holdings</h3>
+<p>Example: "I also hold Nifty 50 ETF + Parag Parikh Flexi Cap" to estimate overlap %</p>
+<a class="btn" href="#">Analyze Now</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="card author">
+<h2>Kushal Lunia</h2>
+<p>CA Finalist | Ex-UBS | Ex-EY | Alteryx | Power BI | Power Query | Python</p>
+<p style="margin-top:15px;">
+<a href="https://linkedin.com/in/kushal-lunia-7b9585138" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:none;">🔗 Connect with me on LinkedIn</a>
+<img src="profile.jpeg" alt="Kushal Lunia" style="width:180px;height:180px;border-radius:50%;object-fit:cover;margin-left:20px;box-shadow:0 8px 25px rgba(0,0,0,0.15);border:5px solid white;">
+</p>
+<p style="margin-top:15px;">Areas of Interest: AI, Automation, Mutual Fund Analysis, ETF Analysis, Financial Analysis, Valuation, Corporate Finance, Business Analysis and Data Analytics.</p>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<p>Prepared by: Kushal Lunia • ETF vs Mutual Fund Research Terminal</p>
+<p style="margin-top:10px; font-size:0.85rem; color:#cbd5e1;">Credential: CA Finalist | Ex-UBS | Ex-EY | Alteryx | Power BI | Power Query | Python</p>
+<p style="margin-top:10px; font-size:0.75rem; color:#94a3b8;">⚠️ Investment Disclaimer: For educational purposes only. Not investment advice. Not SEBI-registered. Consult a SEBI-registered advisor before investing. Past performance ≠ future results. Verify all data from AMFI/AMC/Issuer/Exchange.</p>
+<p style="margin-top:8px; font-size:0.75rem; color:#94a3b8;">⚠️ AI Disclosure: AI-generated analysis. May have hallucination risk — verify all financial figures independently. Data may be delayed. Not a substitute for professional advice. No liability for financial losses.</p>
+<p style="margin-top:8px; font-size:0.75rem; color:#94a3b8;">Report generated: June 2026 | Version: 1.1S | Market: India + Global | Currency: INR / USD</p>
+</footer>
+
+</body>
+</html>
